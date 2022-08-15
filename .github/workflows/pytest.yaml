@@ -6,9 +6,6 @@ on:
       - "!develop"
       - "!main"
     types: [opened, reopened, review_requested, ready_for_review]
-  push:
-    branches:
-      - "FF-[0-9]*"
   workflow_dispatch:
 jobs:
   build:
