@@ -10,6 +10,8 @@ on:
 jobs:
   build:
     if: github.event.pull_request.draft == false
+    env:
+      DEBUG: ${{ secrets.DEBUG }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,7 +21,7 @@ jobs:
           python-version: "3.10"
       - name: Install project requirements
         run: |
-          pip install -r requirements.txt
+          pip install -r requirements
       - name: Run pytest
         run: |
           pytest --cov=./ --cov-report=xml
