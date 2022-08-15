@@ -19,7 +19,7 @@ jobs:
           python-version: "3.10"
       - name: Install project requirements
         run: |
-          pip install -r requirements.txt
+          pip install -r requirements
       - name: Run pytest
         run: |
           pytest --cov=./ --cov-report=xml
