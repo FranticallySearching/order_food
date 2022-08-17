@@ -85,7 +85,8 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-utils.db.mongo.connect()
+client = utils.db.mongo.connect()
+assert client.get_database(os.environ["MONGO_DB"]).name, f"Failed to connect to MongoDB properly"
 
 
 # Password validation
