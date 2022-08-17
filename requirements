@@ -3,9 +3,10 @@ django-dotenv==1.4.2
 mongoengine==0.24.2
 pymongo==4.1.1
 
-# Additional requirement for mongo db dns connection
+# Additional requirement for mongo db dns connection and +srv for mongo db replicas
 dnspython
 
 # Testing
+mongomock
 pytest-django
 pytest-cov
