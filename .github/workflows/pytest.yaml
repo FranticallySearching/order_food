@@ -12,6 +12,10 @@ jobs:
     if: github.event.pull_request.draft == false
     env:
       DEBUG: ${{ secrets.DEBUG }}
+      MONGO_DB: ${{ secrets.MONGO_DB }}
+      MONGO_HOST: ${{ secrets.MONGO_HOST }}
+      MONGO_USERNAME: ${{ secrets.MONGO_USERNAME }}
+      MONGO_PASSWORD: ${{ secrets.MONGO_PASSWORD }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

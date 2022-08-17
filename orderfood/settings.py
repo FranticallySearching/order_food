@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 from pathlib import Path
 
+import utils.db.mongo
 import utils.dotenv
 
 utils.dotenv.read_dotenv()
@@ -84,6 +85,8 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+client = utils.db.mongo.connect()
+assert client.get_database(os.environ["MONGO_DB"]).name, f"Failed to connect to MongoDB properly"
 
 
 # Password validation
