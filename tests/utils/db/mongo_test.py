@@ -1,16 +1,12 @@
-import uuid
-
 import utils.db.mongo
+import utils.dotenv
 
 
 def test_connection():
-    localhost_kwargs = {
-        "alias": uuid.uuid4().hex,
-        "db": "mongoenginetest",
-        "host": "mongomock://localhost",
-    }
-    mongo_client = utils.db.mongo.connect(**localhost_kwargs)
+    utils.dotenv.read_dotenv()
+    mongo_client = utils.db.mongo.get_local_host_connection()
     try:
-        assert mongo_client.list_database_names(), "Failed to connect to Mongo! Couldn't find any database names!"
+        is_localhost = mongo_client.host == "localhost"
+        assert is_localhost, f"Failed to get localhost as host name!"
     finally:
         mongo_client.close()
