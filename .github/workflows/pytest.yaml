@@ -5,7 +5,7 @@ on:
       - "FF-*"
       - "!develop"
       - "!main"
-    types: [opened, reopened, review_requested, ready_for_review]
+    types: [opened, reopened, review_requested, ready_for_review, push]
   workflow_dispatch:
 jobs:
   build:
