@@ -1,3 +1,6 @@
+# order_food
+Application for creating a food ordering website with local places nearby
+
 ### Languages & Versions
 [![Python Version](https://img.shields.io/badge/python-3.10-blue.svg)](https://github.com/FranticallySearching/order_food#readme)
 
@@ -24,9 +27,9 @@
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 
-
-# order_food
-application for creating a food ordering website with local places nearby
+## Setup
+### TODO Add more instructions for setup.
+1. Set up pre-commit (while in project dir): `pre-commit install`
 
 
 # For fun - Codecov Graphs 

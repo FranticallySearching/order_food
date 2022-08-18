@@ -6,6 +6,9 @@ pymongo==4.1.1
 # Additional requirement for mongo db dns connection and +srv for mongo db replicas
 dnspython
 
+# Development
+pre-commit
+
 # Testing
 mongomock
 pytest-django
