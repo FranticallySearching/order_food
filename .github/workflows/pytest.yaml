@@ -2,13 +2,10 @@ name: Feature PR
 on:
   pull_request:
     branches:
-      - "FF*"
-      - "!develop"
-      - "!main"
-    types: [opened, reopened, review_requested, ready_for_review]
-  push:
-    branches:
       - 'FF-[0-9X]+-*'
+      - '!develop'
+      - '!main'
+    types: [opened, reopened, review_requested, ready_for_review]
   workflow_dispatch:
 jobs:
   build:
