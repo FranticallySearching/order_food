@@ -8,7 +8,7 @@ on:
     types: [opened, reopened, review_requested, ready_for_review]
   push:
     branches:
-      - 'FF*'
+      - 'FF-[0-9X]+-*'
   workflow_dispatch:
 jobs:
   build:
