@@ -2,7 +2,7 @@ name: Feature PR
 on:
   pull_request:
     branches:
-      - "FF-*-*"
+      - "FF-*"
       - "!develop"
       - "!main"
     types: [opened, reopened, review_requested, ready_for_review]
