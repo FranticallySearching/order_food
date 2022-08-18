@@ -2,9 +2,9 @@ name: Feature PR
 on:
   pull_request:
     branches:
-      - "FF-[0-9]+*"
-      - "!develop"
-      - "!main"
+      - 'FF-[0-9X]+-*'
+      - '!develop'
+      - '!main'
     types: [opened, reopened, review_requested, ready_for_review]
   workflow_dispatch:
 jobs:
