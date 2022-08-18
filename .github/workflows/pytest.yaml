@@ -5,7 +5,10 @@ on:
       - "FF*"
       - "!develop"
       - "!main"
-    types: [opened, reopened, review_requested, ready_for_review, push]
+    types: [opened, reopened, review_requested, ready_for_review]
+  push:
+    branches:
+      - 'FF*'
   workflow_dispatch:
 jobs:
   build:
