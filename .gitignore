@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# IDE Auto-generated files
+.idea/
+.idea\
